@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="site-title" id="site-name">Photography</a>
+            <nav>
+                <a href="#galleries">Galleries</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="#galleries">Galleries</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <p class="hero-eyebrow">Welcome</p>
+            <h1 id="hero-title">A Life Through Lens</h1>
+            <p class="hero-sub" id="hero-subtitle">A personal collection of photographs — organised by moment, remembered by light.</p>
+        </div>
+        <div class="hero-line"></div>
+    </section>
+
+    <!-- GALLERIES -->
+    <main id="galleries">
+        <div id="gallery-list">
+            <!-- Galleries rendered by JS -->
+            <div class="loading-state">
+                <div class="loader"></div>
+                <p>Loading galleries…</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="about-inner">
+            <h2 id="about-title">About</h2>
+            <p id="about-text">Edit this text in <code>photos.json</code> to tell visitors about yourself and your photography.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <div class="contact-inner">
+            <h2>Get in Touch</h2>
+            <p id="contact-text">Edit your contact details in <code>photos.json</code></p>
+            <a id="contact-email" href="mailto:your@email.com" class="contact-link">your@email.com</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="year"></span> <span id="footer-name">Photography</span>. All rights reserved.</p>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+        <button class="lb-close" id="lb-close" aria-label="Close">&#10005;</button>
+        <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous photo">&#8592;</button>
+        <button class="lb-nav lb-next" id="lb-next" aria-label="Next photo">&#8594;</button>
+        <div class="lb-content">
+            <div class="lb-img-wrap">
+                <div class="lb-spinner"></div>
+                <img id="lb-img" src="" alt="">
+            </div>
+            <div class="lb-meta">
+                <span id="lb-counter"></span>
+                <button id="lb-download" class="lb-download-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Full Resolution
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PASSWORD MODAL -->
+    <div id="pw-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-box">
+            <h3>Download Full Resolution</h3>
+            <p>Please enter the download password to continue.</p>
+            <input type="password" id="pw-input" placeholder="Enter password" autocomplete="off">
+            <p id="pw-error" class="pw-error hidden">Incorrect password — please try again.</p>
+            <div class="modal-actions">
+                <button id="pw-cancel" class="btn-ghost">Cancel</button>
+                <button id="pw-submit" class="btn-gold">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- OVERLAY -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
