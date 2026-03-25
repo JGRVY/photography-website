@@ -10,13 +10,13 @@
   "galleries": [
     {
       "id": "gallery-1",
-      "title": "Countryside Walk",
+      "title": "Countryside",
       "date": "2024-06-15",
       "folder": "Photography"
     },
     {
       "id": "gallery-2",
-      "title": "Winter Landscapes",
+      "title": "Winter",
       "date": "2024-12-10",
       "folder": "photography"
     }
