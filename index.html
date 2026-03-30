@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarSpot UK — Identify the Car</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ SETUP SCREEN ═══════════════════════════════ -->
+  <div id="setup-screen" class="screen active">
+    <div class="setup-wrap">
+
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="12" width="32" height="12" rx="3" fill="currentColor"/>
+            <path d="M8 12 L12 4 L28 4 L32 12" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <circle cx="10" cy="24" r="4" fill="white" stroke="currentColor" stroke-width="2"/>
+            <circle cx="30" cy="24" r="4" fill="white" stroke="currentColor" stroke-width="2"/>
+            <rect x="16" y="6" width="8" height="6" rx="1" fill="white" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>CarSpot <em>UK</em></h1>
+          <p>Can you identify the car?</p>
+        </div>
+      </div>
+
+      <div class="setup-card">
+
+        <div class="setup-field">
+          <span class="field-label">Difficulty</span>
+          <div class="diff-grid">
+            <label class="diff-option">
+              <input type="checkbox" name="difficulty" value="easy" checked>
+              <div class="diff-card">
+                <span class="diff-check">✓</span>
+                <div>
+                  <span class="diff-title">Easy</span>
+                  <span class="diff-sub">Common UK cars, front-on shots</span>
+                </div>
+              </div>
+            </label>
+            <label class="diff-option">
+              <input type="checkbox" name="difficulty" value="medium">
+              <div class="diff-card">
+                <span class="diff-check">✓</span>
+                <div>
+                  <span class="diff-title">Medium</span>
+                  <span class="diff-sub">Less common, angled shots</span>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="setup-field">
+          <span class="field-label">Questions per round</span>
+          <div class="count-grid">
+            <button class="count-pill" data-count="5">5</button>
+            <button class="count-pill active" data-count="10">10</button>
+            <button class="count-pill" data-count="15">15</button>
+            <button class="count-pill" data-count="20">20</button>
+          </div>
+        </div>
+
+        <p id="setup-error" class="setup-error hidden">Please select at least one difficulty level.</p>
+        <button id="start-btn" class="btn-primary">
+          Start Quiz <span class="btn-arrow">→</span>
+        </button>
+      </div>
+
+      <p class="setup-footer">
+        10 easy + 10 medium questions available &nbsp;·&nbsp; New cars added regularly
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ QUIZ SCREEN ════════════════════════════════ -->
+  <div id="quiz-screen" class="screen">
+    <div class="quiz-wrap">
+
+      <header class="quiz-header">
+        <span class="quiz-brand">CarSpot UK</span>
+        <div class="quiz-meta">
+          <span id="q-counter" class="q-counter">1 / 10</span>
+          <div class="score-badge">
+            <span class="score-label">Score</span>
+            <span id="score-val" class="score-val">0</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="quiz-card">
+        <div class="prog-track">
+          <div id="prog-fill" class="prog-fill"></div>
+        </div>
+
+        <div class="car-image-wrap">
+          <img id="car-img" src="" alt="Identify this car" />
+          <div class="img-loader" id="img-loader">
+            <div class="spinner"></div>
+          </div>
+        </div>
+
+        <div class="q-section">
+          <p class="q-label">What make and model is this?</p>
+          <div id="answers" class="answers-grid"></div>
+        </div>
+
+        <div class="quiz-foot">
+          <div id="feedback" class="feedback"></div>
+          <button id="next-btn" class="btn-next hidden">
+            Next <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════ RESULTS SCREEN ══════════════════════════════ -->
+  <div id="results-screen" class="screen">
+    <div class="results-wrap">
+      <div class="results-card">
+
+        <p class="results-eyebrow">Quiz Complete</p>
+        <div class="big-score">
+          <span id="r-correct">0</span>
+          <span class="score-sep">/</span>
+          <span id="r-total">10</span>
+        </div>
+        <p id="r-grade" class="r-grade"></p>
+
+        <div class="results-stats">
+          <div class="r-stat">
+            <span id="r-stat-correct" class="r-num r-green">0</span>
+            <span class="r-key">Correct</span>
+          </div>
+          <div class="r-stat r-stat-divider"></div>
+          <div class="r-stat">
+            <span id="r-stat-wrong" class="r-num r-red">0</span>
+            <span class="r-key">Wrong</span>
+          </div>
+          <div class="r-stat r-stat-divider"></div>
+          <div class="r-stat">
+            <span id="r-accuracy" class="r-num">0%</span>
+            <span class="r-key">Accuracy</span>
+          </div>
+        </div>
+
+        <div class="results-btns">
+          <button id="replay-btn" class="btn-primary">Play Again</button>
+          <button id="reset-btn" class="btn-secondary">Change Settings</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car001/900/500",
+    "correct": "Ford Fiesta",
+    "wrong": ["Vauxhall Corsa", "Peugeot 208", "Renault Clio"]
+  },
+  {
+    "id": 2,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car002/900/500",
+    "correct": "Volkswagen Golf",
+    "wrong": ["Ford Focus", "SEAT Leon", "Skoda Octavia"]
+  },
+  {
+    "id": 3,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car003/900/500",
+    "correct": "Vauxhall Corsa",
+    "wrong": ["Ford Fiesta", "Toyota Yaris", "Peugeot 208"]
+  },
+  {
+    "id": 4,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car004/900/500",
+    "correct": "Nissan Qashqai",
+    "wrong": ["Ford Kuga", "Kia Sportage", "Vauxhall Mokka"]
+  },
+  {
+    "id": 5,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car005/900/500",
+    "correct": "BMW 3 Series",
+    "wrong": ["Audi A4", "Mercedes C-Class", "Volvo S60"]
+  },
+  {
+    "id": 6,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car006/900/500",
+    "correct": "Ford Focus",
+    "wrong": ["Volkswagen Golf", "Vauxhall Astra", "Toyota Corolla"]
+  },
+  {
+    "id": 7,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car007/900/500",
+    "correct": "Audi A3",
+    "wrong": ["BMW 1 Series", "Mercedes A-Class", "Volkswagen Golf"]
+  },
+  {
+    "id": 8,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car008/900/500",
+    "correct": "Toyota Yaris",
+    "wrong": ["Honda Jazz", "Vauxhall Corsa", "Ford Fiesta"]
+  },
+  {
+    "id": 9,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car009/900/500",
+    "correct": "Range Rover Evoque",
+    "wrong": ["Land Rover Discovery Sport", "Volvo XC40", "Jaguar E-Pace"]
+  },
+  {
+    "id": 10,
+    "difficulty": "easy",
+    "image": "https://picsum.photos/seed/car010/900/500",
+    "correct": "Mercedes C-Class",
+    "wrong": ["BMW 3 Series", "Audi A4", "Volvo S60"]
+  },
+  {
+    "id": 11,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car011/900/500",
+    "correct": "SEAT Ibiza",
+    "wrong": ["Volkswagen Polo", "Skoda Fabia", "Ford Fiesta"]
+  },
+  {
+    "id": 12,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car012/900/500",
+    "correct": "Skoda Octavia",
+    "wrong": ["Volkswagen Passat", "SEAT Leon", "Ford Focus"]
+  },
+  {
+    "id": 13,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car013/900/500",
+    "correct": "Peugeot 208",
+    "wrong": ["Citroen C3", "Vauxhall Corsa", "Renault Clio"]
+  },
+  {
+    "id": 14,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car014/900/500",
+    "correct": "Mazda CX-5",
+    "wrong": ["Kia Sportage", "Hyundai Tucson", "Volkswagen Tiguan"]
+  },
+  {
+    "id": 15,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car015/900/500",
+    "correct": "Kia Sportage",
+    "wrong": ["Hyundai Tucson", "Nissan Qashqai", "Mazda CX-5"]
+  },
+  {
+    "id": 16,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car016/900/500",
+    "correct": "Volvo XC40",
+    "wrong": ["BMW X1", "Audi Q3", "Mercedes GLA"]
+  },
+  {
+    "id": 17,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car017/900/500",
+    "correct": "Ford Puma",
+    "wrong": ["Ford Fiesta", "Volkswagen T-Cross", "SEAT Arona"]
+  },
+  {
+    "id": 18,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car018/900/500",
+    "correct": "Renault Clio",
+    "wrong": ["Peugeot 208", "Vauxhall Corsa", "Ford Fiesta"]
+  },
+  {
+    "id": 19,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car019/900/500",
+    "correct": "Hyundai Tucson",
+    "wrong": ["Kia Sportage", "Nissan Qashqai", "Ford Kuga"]
+  },
+  {
+    "id": 20,
+    "difficulty": "medium",
+    "image": "https://picsum.photos/seed/car020/900/500",
+    "correct": "Vauxhall Astra",
+    "wrong": ["Ford Focus", "Volkswagen Golf", "SEAT Leon"]
+  }
+]
